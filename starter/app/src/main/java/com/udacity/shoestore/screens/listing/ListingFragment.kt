@@ -25,3 +25,9 @@ class ListingFragment : Fragment() {
         return binding.root
     }
 }
+/*
+Hint: In the Shoe List destination, to add a child view programmatically to a ViewGroup, such as LinearLayout,
+use the addView() method https://developer.android.com/reference/kotlin/android/view/ViewGroup.html#addview .
+Refer to a sample implementation in the StackOverflow discussion here:
+https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views.
+ */

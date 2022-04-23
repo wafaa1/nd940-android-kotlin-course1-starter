@@ -1,9 +1,11 @@
 package com.udacity.shoestore.screens.detail
 
+import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import com.udacity.shoestore.R
@@ -24,4 +26,7 @@ class DetailFragment : Fragment() {
 
         return binding.root
     }
+//    // to hide the keyboard , don't know much of explanation for it
+//    val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//    imm.hideSoftInputFromWindow(view.windowToken,0)
 }

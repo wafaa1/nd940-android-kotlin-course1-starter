@@ -3,7 +3,11 @@
     <string name="email">Enter your email</string>
     <string name="login">Log In</string>
     <string name="newAccount">Create An Account</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="welcome">Welcome</string>
+    <string name="add_new_shoe_to_listing">add new shoe to listing</string>
+    <string name="enter__shoe_details">Enter details for the new shoe</string>
+    <string name="company_name">Company Name</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="shoe_name">Shoe Name</string>
 </resources>

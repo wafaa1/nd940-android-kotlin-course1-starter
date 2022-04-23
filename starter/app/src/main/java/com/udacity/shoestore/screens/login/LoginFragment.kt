@@ -1,10 +1,12 @@
 package com.udacity.shoestore.screens.login
 
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputMethodManager
 import androidx.databinding.DataBindingUtil
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentLoginBinding
@@ -35,6 +37,10 @@ class LoginFragment : Fragment() {
 
         return binding.root
     }
+//
+//    // to hide the keyboard , don't know much of explanation for it
+//    val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+//    imm.hideSoftInputFromWindow(view.windowToken,0)
 }
 
 //    // TODO: Rename and change types of parameters
