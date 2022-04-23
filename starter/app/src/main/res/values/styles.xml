@@ -16,4 +16,18 @@
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="stylingText">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:paddingTop">@dimen/padding_large</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
+    <style name="stylingButton">
+        <item name="android:fontFamily">@font/roboto_medium</item>
+        <item name="android:paddingTop">@dimen/padding_large</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:textSize">@dimen/text_size</item>
+    </style>
+
 </resources>
