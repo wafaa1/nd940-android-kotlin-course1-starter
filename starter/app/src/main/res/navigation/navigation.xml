@@ -2,12 +2,12 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nanigation"
+    android:id="@+id/navigation"
     app:startDestination="@id/loginFragment">
 
     <fragment
         android:id="@+id/loginFragment"
-        android:name="com.udacity.shoestore.LoginFragment"
+        android:name="com.udacity.shoestore.screens.login.LoginFragment"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
-        android:name="com.udacity.shoestore.WelcomeFragment"
+        android:name="com.udacity.shoestore.screens.welcome.WelcomeFragment"
         android:label="fragment_welcome"
         tools:layout="@layout/fragment_welcome" >
         <action
@@ -25,7 +25,27 @@
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
-        android:name="com.udacity.shoestore.InstructionFragment"
+        android:name="com.udacity.shoestore.screens.instruction.InstructionFragment"
         android:label="fragment_instruction"
-        tools:layout="@layout/fragment_instruction" />
+        tools:layout="@layout/fragment_instruction" >
+        <action
+            android:id="@+id/action_instructionFragment_to_listingFragment"
+            app:destination="@id/listingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listingFragment"
+        android:name="com.udacity.shoestore.screens.shoes.ListingFragment"
+        android:label="ListingFragment" >
+        <action
+            android:id="@+id/action_listingFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.udacity.shoestore.screens.shoes.DetailFragment"
+        android:label="DetailFragment" >
+        <action
+            android:id="@+id/action_detailFragment_to_listingFragment"
+            app:destination="@id/listingFragment" />
+    </fragment>
 </navigation>

@@ -1,47 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools">
-    <FrameLayout
+
+<!--    using linear layout here as the layout is simple with 2 TextViews and a button that are layed vertically-->
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
         tools:context=".WelcomeFragment">
-
-        <!-- TODO: Update blank fragment layout -->
 
         <TextView
             android:id="@+id/welcomeText"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/padding_xLarge"
             android:layout_marginTop="@dimen/padding_xLarge"
             android:layout_marginEnd="@dimen/padding_xLarge"
             android:layout_marginBottom="@dimen/padding_xLarge"
-            android:text="@string/welcome"
             android:fontFamily="casual"
+            android:text="@string/welcome"
             android:textAlignment="center"
             android:textSize="40sp" />
+
         <TextView
             android:id="@+id/storeText"
             style="@style/stylingText"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_xLarge"
-            android:layout_marginTop="@dimen/padding_xLarge"
-            android:layout_marginEnd="@dimen/padding_xLarge"
-            android:layout_marginBottom="@dimen/padding_xLarge"
-            android:text="@string/welcome"
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:layout_marginStart="@dimen/padding_small"
+            android:layout_marginTop="@dimen/padding_large"
+            android:layout_marginEnd="@dimen/padding_small"
+            android:layout_marginBottom="@dimen/padding_small"
+            android:text="@string/welcome_long_text"
             android:textAlignment="center"
             android:textSize="20sp" />
+
         <Button
             android:id="@+id/welcomeNextButton"
             style="@style/stylingButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/padding_small"
-            android:paddingBottom="@dimen/padding_xLarge"
-            android:fontFamily="@font/acme"
-            android:text="NEXT" />
+            android:layout_marginTop="@dimen/padding_xLarge"
+            android:text="@string/next" />
 
-    </FrameLayout>
+    </LinearLayout>
 </layout>

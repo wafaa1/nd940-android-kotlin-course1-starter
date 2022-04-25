@@ -4,44 +4,33 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
         tools:context=".InstructionFragment">
 
         <!-- TODO: Update blank fragment layout -->
         <TextView
             android:id="@+id/rule1Text"
-            android:layout_width="wrap_content"
+            style="@style/stylingText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_xLarge"
-            android:layout_marginTop="@dimen/padding_xLarge"
-            android:layout_marginEnd="@dimen/padding_xLarge"
-            android:layout_marginBottom="@dimen/padding_xLarge"
-            android:text="@string/welcome"
-            android:fontFamily="casual"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+            android:layout_marginTop="@dimen/padding_small"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:text="@string/rule1"
+            android:textAlignment="center" />
         <TextView
             android:id="@+id/rules2Text"
-            android:layout_width="wrap_content"
+            style="@style/stylingText"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_xLarge"
-            android:layout_marginTop="@dimen/padding_xLarge"
-            android:layout_marginEnd="@dimen/padding_xLarge"
-            android:layout_marginBottom="@dimen/padding_xLarge"
-            android:text="@string/welcome"
-            android:fontFamily="casual"
-            android:textAlignment="center"
-            android:textSize="20sp" />
+            android:layout_marginTop="@dimen/padding_large"
+            android:layout_marginBottom="@dimen/padding_large"
+            android:text="@string/rule2"
+            android:textAlignment="center" />
         <Button
-            android:id="@+id/goToListButton"
-            style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="@dimen/padding_small"
-            android:paddingBottom="@dimen/padding_xLarge"
-            android:fontFamily="@font/acme"
-            android:text="@string/newAccount" />
-
+            android:id="@+id/instructionNextButton"
+            style="@style/stylingButton"
+            android:text="@string/next" />
 
     </LinearLayout>
 </layout>

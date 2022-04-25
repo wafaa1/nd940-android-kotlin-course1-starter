@@ -7,8 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.navigation.Navigation
+import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentWelcomeBinding
+import com.udacity.shoestore.screens.login.LoginFragmentDirections
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -32,6 +34,10 @@ class WelcomeFragment : Fragment() {
             // Inflate the layout for this fragment
             binding = DataBindingUtil.inflate(
                 inflater, R.layout.fragment_welcome, container, false)
+
+            binding.welcomeNextButton.setOnClickListener{
+                findNavController().navigate(WelcomeFragmentDirections.actionWelcomeFragmentToInstructionFragment())
+            }
 
             return binding.root
     }

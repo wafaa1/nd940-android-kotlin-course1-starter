@@ -11,20 +11,12 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <ImageView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:srcCompat="@android:drawable/ic_menu_view" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="shoe"/>
-
             <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:id="@+id/add_button"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@string/add_new_shoe_to_listing"/>
+                app:srcCompat="@drawable/ic_baseline_add_circle_24"
+                android:text="@string/add"/>
 
         </LinearLayout>
 
