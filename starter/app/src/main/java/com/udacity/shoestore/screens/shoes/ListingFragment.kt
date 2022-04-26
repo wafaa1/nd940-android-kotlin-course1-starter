@@ -1,16 +1,16 @@
 package com.udacity.shoestore.screens.shoes
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListingBinding
+import com.udacity.shoestore.databinding.ShoeDetailsBinding
 import com.udacity.shoestore.screens.welcome.WelcomeFragmentDirections
 
 class ListingFragment : Fragment() {
@@ -19,12 +19,11 @@ class ListingFragment : Fragment() {
 
     private lateinit var binding: FragmentListingBinding
 
-    private var listSize = 0
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
 
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(
@@ -33,33 +32,67 @@ class ListingFragment : Fragment() {
         // Get the viewmodel
         viewModel = ViewModelProvider(this).get(ListingViewModel::class.java)
 
-        viewModel.shoeList.observe(viewLifecycleOwner, Observer { newList ->
-           // TODO
-        })
+        //is this needed?
+        binding.lifecycleOwner = viewLifecycleOwner
+
+
+
+// look example here https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
+        binding.addFab.setOnClickListener{
+            findNavController().navigate(ListingFragmentDirections.actionListingFragmentToDetailFragment())
+        }
 
         viewModel.eventShoeAdded.observe(viewLifecycleOwner, Observer { hasAddedShoe ->
             if(hasAddedShoe) {
-                listTheShoes()
+//                updateShoeList()
+                val shoesLayout = binding.root.findViewById<LinearLayout>(R.id.shoesLinear)
+
+                viewModel.shoeList.value?.forEach { shoe ->
+                    val tempBinding = DataBindingUtil.inflate<ShoeDetailsBinding>(inflater, R.layout.shoe_details, container, false)
+                    tempBinding.shoe = shoe
+                    shoesLayout.addView(tempBinding.root)
+                }
+
+                viewModel.gotTheAddedShoe()
             }
         })
 
-        binding.addButton.setOnClickListener{
-            findNavController().navigate(ListingFragmentDirections.actionListingFragmentToDetailFragment())
-        }
         setHasOptionsMenu(true)
+
 
         return binding.root
     }
 
-    private fun listTheShoes(){
-/*        //  example for adding a button to linearlayout programatically
-        buttonAddView.setOnClickListener {
-            val button = Button(this)
-            button.text = "This is Button"
-            linear_layout.addView(button)
-        }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        super.onCreateOptionsMenu(menu, inflater)
+
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return super.onOptionsItemSelected(item)
+    }
+
+    private fun updateShoeList(){
+
     }
 }
-*/
+
+//        viewModel.shoeList.observe(viewLifecycleOwner, Observer { newList ->
+//        val iterator = newList.listIterator()
+//        for (item in iterator) {
+//        // add view}
+//           // TODO
+//        })
+/*
+viewModel.eventShoeAdded.observe(viewLifecycleOwner, Observer { hasAddedShoe ->
+    if(hasAddedShoe) {
+//                updateShoeList()
     }
-}
+})*/
+
+
+
+
+
+
+

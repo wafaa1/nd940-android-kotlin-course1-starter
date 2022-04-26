@@ -12,7 +12,8 @@
         tools:layout="@layout/fragment_login" >
         <action
             android:id="@+id/action_loginFragment_to_welcomeFragment"
-            app:destination="@id/welcomeFragment" />
+            app:destination="@id/welcomeFragment"
+             />
     </fragment>
     <fragment
         android:id="@+id/welcomeFragment"
@@ -21,7 +22,8 @@
         tools:layout="@layout/fragment_welcome" >
         <action
             android:id="@+id/action_welcomeFragment_to_instructionFragment"
-            app:destination="@id/instructionFragment" />
+            app:destination="@id/instructionFragment"
+            app:popUpToInclusive="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/instructionFragment"
@@ -30,7 +32,8 @@
         tools:layout="@layout/fragment_instruction" >
         <action
             android:id="@+id/action_instructionFragment_to_listingFragment"
-            app:destination="@id/listingFragment" />
+            app:destination="@id/listingFragment"
+            app:popUpToInclusive="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/listingFragment"

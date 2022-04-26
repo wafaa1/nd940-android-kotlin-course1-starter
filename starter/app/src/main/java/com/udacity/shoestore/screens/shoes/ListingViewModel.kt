@@ -32,4 +32,13 @@ class ListingViewModel : ViewModel() {
             Shoe("classic", 11.5, "clarks", "men classic black shoes")
         )
     }
+
+    fun addShoe(shoe: Shoe){
+        _shoeList.value?.add(shoe)
+        _eventShoeAdded.value = true
+    }
+
+    fun gotTheAddedShoe(){
+        _eventShoeAdded.value = false
+    }
 }
