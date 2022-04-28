@@ -55,7 +55,7 @@
             android:layout_marginBottom="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="@string/shoe_name"
+            android:hint="@string/shoe_name"
             android:textAlignment="viewStart"
             app:layout_constraintBottom_toTopOf="@id/editShoeCompany"
             app:layout_constraintEnd_toEndOf="parent"

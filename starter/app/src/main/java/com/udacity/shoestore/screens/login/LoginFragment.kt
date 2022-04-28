@@ -39,6 +39,8 @@ class LoginFragment : Fragment() {
         }
 
         binding.signUpButton.setOnClickListener{
+            binding.editEmail.text.clear()
+            binding.editPassword.text.clear()
             findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToWelcomeFragment())
         }
         return binding.root

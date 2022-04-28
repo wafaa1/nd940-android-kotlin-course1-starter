@@ -19,18 +19,22 @@ class ListingViewModel : ViewModel() {
     val eventShoeAdded : LiveData<Boolean>
         get()=_eventShoeAdded
 
+    private  val  initialShoeList = mutableListOf<Shoe>(
+//            Shoe("runner",10.0,"nike","men sports shoes for running"),
+//            Shoe("tennis", 8.5 , "puma", "ladies sports tennis shoes"),
+            Shoe("classic", 11.5, "clarks", "men classic black shoes")
+    )
 
     init{
-        startList()
+        _shoeList.value = mutableListOf()
         _eventShoeAdded.value = false
+        startList()
     }
 
     private fun startList() {
-        _shoeList.value = mutableListOf<Shoe>(
-            Shoe("runner",10.0,"nike","men sports shoes for running"),
-            Shoe("tennis", 8.5 , "puma", "ladies sports tennis shoes"),
-            Shoe("classic", 11.5, "clarks", "men classic black shoes")
-        )
+        initialShoeList.forEach { shoe: Shoe ->
+            addShoe(shoe)
+        }
     }
 
     fun addShoe(shoe: Shoe){
@@ -41,4 +45,6 @@ class ListingViewModel : ViewModel() {
     fun gotTheAddedShoe(){
         _eventShoeAdded.value = false
     }
+
 }
+

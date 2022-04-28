@@ -13,16 +13,16 @@
 
         <TextView
             android:id="@+id/emailText"
-            android:layout_width="wrap_content"
-            android:layout_height="38dp"
+            android:layout_width="81dp"
+            android:layout_height="39dp"
             android:layout_marginStart="44dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="120dp"
             android:paddingTop="@dimen/padding_small"
             android:paddingBottom="@dimen/padding_small"
             android:text="@string/enter_email"
             android:textAlignment="center"
             app:layout_constraintEnd_toStartOf="@+id/editEmail"
-            app:layout_constraintHorizontal_bias="0.173"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -32,7 +32,7 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="40dp"
             android:ems="10"
-            android:hint="@string/email"
+            android:hint="@string/enter_email"
             android:inputType="textEmailAddress"
             android:minHeight="48dp"
             android:textAlignment="center"
@@ -41,10 +41,11 @@
 
         <TextView
             android:id="@+id/passwordText"
-            android:layout_width="102dp"
-            android:layout_height="30dp"
-            android:layout_marginStart="28dp"
-            android:layout_marginTop="96dp"
+            android:layout_width="114dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="52dp"
+            android:gravity="center"
             android:text="@string/enter_password"
             android:textAlignment="center"
             app:layout_constraintStart_toStartOf="parent"
@@ -57,9 +58,8 @@
             android:layout_height="wrap_content"
             android:layout_marginEnd="16dp"
             android:ems="10"
-            android:hint="@string/email"
+            android:hint="@string/enter_password"
             android:inputType="textPassword"
-            android:text="@string/enter_password"
             android:textAlignment="center"
             app:layout_constraintBaseline_toBaselineOf="@+id/passwordText"
             app:layout_constraintEnd_toEndOf="parent" />

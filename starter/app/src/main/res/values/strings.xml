@@ -18,4 +18,5 @@
     <string name="rule1">By clicking the NEXT button below, you will be directed to listing of all the shoes in store.</string>
     <string name="rule2">If need to add a new shoe to the store, click the \"+\" button in the next screen and enter the information for the new added shoe: shoe name, size (in form of x.x), company name, and description.</string>
     <string name="add">+</string>
+    <string name="log_out">Log Out</string>
 </resources>

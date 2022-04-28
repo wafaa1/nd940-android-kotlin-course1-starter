@@ -16,7 +16,7 @@ class DetailFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
 
-    private lateinit var viewModel: ListingViewModel
+    private lateinit var viewModel : ListingViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,9 +31,15 @@ class DetailFragment : Fragment() {
         viewModel = ViewModelProvider(this).get(ListingViewModel::class.java)
 
         binding.saveButton.setOnClickListener{
-            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
+//            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
+
             val shoe = Shoe("hopper",7.5, "addidas", "light weight shoe for ladies")
             viewModel.addShoe(shoe)
+            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
+        }
+
+        binding.cancelButton.setOnClickListener{
+            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
         }
 
         return binding.root
