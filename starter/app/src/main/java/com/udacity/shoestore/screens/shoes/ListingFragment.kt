@@ -49,13 +49,13 @@ class ListingFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return  NavigationUI.onNavDestinationSelected(item,requireView().findNavController()) || super.onOptionsItemSelected(item)
-//        when(item.itemId){
-//            R.id.login ->{
-//                findNavController().navigate(ListingFragmentDirections.actionListingFragmentToLogout())
-//            }
-//        }
-//        return  super.onOptionsItemSelected(item)
+//        return  NavigationUI.onNavDestinationSelected(item,requireView().findNavController()) || super.onOptionsItemSelected(item)
+        when(item.itemId){
+            R.id.loginFragment ->{
+                findNavController().navigate(ListingFragmentDirections.actionListingFragmentToLogout())
+            }
+        }
+        return  super.onOptionsItemSelected(item)
     }
 
     private fun updateShoeList(inflater: LayoutInflater, container: ViewGroup?, shoesList: List<Shoe>) {
