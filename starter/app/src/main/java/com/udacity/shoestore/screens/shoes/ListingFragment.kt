@@ -17,9 +17,7 @@ import com.udacity.shoestore.models.Shoe
 
 class ListingFragment : Fragment() {
 
-//    private lateinit var viewModel: ListingViewModel
-
-    private val viewModel: ListingViewModel by activityViewModels()
+    private val viewModel: ListingViewModel by activityViewModels() // https://developer.android.com/topic/libraries/architecture/viewmodel#sharing
     private lateinit var binding: FragmentListingBinding
 
     override fun onCreateView(
@@ -35,6 +33,8 @@ class ListingFragment : Fragment() {
                    updateShoeList(inflater, container, newShoeList)
         })
 
+
+        //checked https://www.geeksforgeeks.org/floating-action-button-fab-in-android-with-example/
         binding.addFab.setOnClickListener{
             findNavController().navigate(ListingFragmentDirections.actionListingFragmentToDetailFragment())
         }
@@ -49,7 +49,6 @@ class ListingFragment : Fragment() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-//        return  NavigationUI.onNavDestinationSelected(item,requireView().findNavController()) || super.onOptionsItemSelected(item)
         when(item.itemId){
             R.id.loginFragment ->{
                 findNavController().navigate(ListingFragmentDirections.actionListingFragmentToLogout())
@@ -60,7 +59,7 @@ class ListingFragment : Fragment() {
 
     private fun updateShoeList(inflater: LayoutInflater, container: ViewGroup?, shoesList: List<Shoe>) {
         val shoesLayout =
-            binding.root.findViewById<LinearLayout>(R.id.shoesLinear)//maybe for resolving scrolling shoeDetailsLayout?
+            binding.root.findViewById<LinearLayout>(R.id.shoesLinear)
         shoesList.forEach { shoe ->
             val shoeDetailsBinding =
                 DataBindingUtil.inflate<ShoeDetailsBinding>(inflater, R.layout.shoe_details, container, false)

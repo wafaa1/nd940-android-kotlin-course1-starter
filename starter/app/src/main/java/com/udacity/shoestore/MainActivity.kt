@@ -20,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         Timber.plant(Timber.DebugTree())
 
+
         val navController = this.findNavController(R.id.myNavHostFragment)
         NavigationUI.setupActionBarWithNavController(this, navController)
         appBarConfiguration = AppBarConfiguration(navController.graph)

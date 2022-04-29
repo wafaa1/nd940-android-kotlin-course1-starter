@@ -17,6 +17,7 @@ class DetailFragment : Fragment() {
 
     private lateinit var binding: FragmentDetailBinding
 
+    // checked https://developer.android.com/topic/libraries/architecture/viewmodel#sharing
     private val viewModel: ListingViewModel by activityViewModels()
 
     override fun onCreateView(
