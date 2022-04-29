@@ -14,10 +14,10 @@
             android:id="@+id/welcomeText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/padding_xLarge"
-            android:layout_marginTop="@dimen/padding_xLarge"
-            android:layout_marginEnd="@dimen/padding_xLarge"
-            android:layout_marginBottom="@dimen/padding_xLarge"
+            android:layout_marginStart="@dimen/xLarge_margin_padding"
+            android:layout_marginTop="@dimen/xLarge_margin_padding"
+            android:layout_marginEnd="@dimen/xLarge_margin_padding"
+            android:layout_marginBottom="@dimen/xLarge_margin_padding"
             android:fontFamily="casual"
             android:text="@string/welcome"
             android:textAlignment="center"
@@ -28,10 +28,10 @@
             style="@style/stylingText"
             android:layout_width="match_parent"
             android:layout_height="182dp"
-            android:layout_marginStart="@dimen/padding_small"
-            android:layout_marginTop="@dimen/padding_large"
-            android:layout_marginEnd="@dimen/padding_small"
-            android:layout_marginBottom="@dimen/padding_small"
+            android:layout_marginStart="@dimen/small_margin_padding"
+            android:layout_marginTop="@dimen/large_margin_padding"
+            android:layout_marginEnd="@dimen/small_margin_padding"
+            android:layout_marginBottom="@dimen/small_margin_padding"
             android:text="@string/welcome_long_text"
             android:textAlignment="center"
             android:textSize="20sp" />
@@ -39,7 +39,7 @@
         <Button
             android:id="@+id/welcomeNextButton"
             style="@style/stylingButton"
-            android:layout_marginTop="@dimen/padding_xLarge"
+            android:layout_marginTop="@dimen/xLarge_margin_padding"
             android:text="@string/next" />
 
     </LinearLayout>

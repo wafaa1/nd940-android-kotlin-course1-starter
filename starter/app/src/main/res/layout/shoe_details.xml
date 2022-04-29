@@ -12,37 +12,37 @@
         android:id="@+id/shoeDetailsLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/padding_large"
-        android:layout_marginTop="@dimen/padding_xLarge"
+        android:layout_marginStart="@dimen/large_margin_padding"
+        android:layout_marginTop="@dimen/xLarge_margin_padding"
         android:orientation="vertical">
 
         <TextView
             android:id="@+id/shoeName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_large"
+            android:layout_marginTop="@dimen/large_margin_padding"
             android:text="@={shoe.name}" />
 
         <TextView
             android:id="@+id/shoeSize"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_small"
+            android:layout_marginTop="@dimen/small_margin_padding"
             android:text="@{String.valueOf(shoe.size)}" />
 
         <TextView
             android:id="@+id/companyName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_small"
+            android:layout_marginTop="@dimen/small_margin_padding"
             android:text="@={shoe.company}" />
 
         <TextView
             android:id="@+id/shoeDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_small"
-            android:layout_marginBottom="@dimen/padding_large"
+            android:layout_marginTop="@dimen/small_margin_padding"
+            android:layout_marginBottom="@dimen/large_margin_padding"
             android:text="@={shoe.description}" />
     </LinearLayout>
 </layout>

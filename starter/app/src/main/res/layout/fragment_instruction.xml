@@ -14,8 +14,8 @@
             style="@style/stylingText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_small"
-            android:layout_marginBottom="@dimen/padding_large"
+            android:layout_marginTop="@dimen/small_margin_padding"
+            android:layout_marginBottom="@dimen/large_margin_padding"
             android:text="@string/rule1"
             android:textAlignment="center" />
         <TextView
@@ -23,8 +23,8 @@
             style="@style/stylingText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/padding_large"
-            android:layout_marginBottom="@dimen/padding_large"
+            android:layout_marginTop="@dimen/large_margin_padding"
+            android:layout_marginBottom="@dimen/large_margin_padding"
             android:text="@string/rule2"
             android:textAlignment="center" />
         <Button

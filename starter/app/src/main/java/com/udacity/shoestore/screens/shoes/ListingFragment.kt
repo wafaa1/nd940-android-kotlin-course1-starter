@@ -29,28 +29,14 @@ class ListingFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
 
-
         // Inflate the layout for this fragment
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_listing, container, false)
-
-        // Get the viewmodel
-//        viewModel = ViewModelProvider(this).get(ListingViewModel::class.java)
-
-
-       /* viewModel.eventShoeAdded.observe(viewLifecycleOwner, Observer { hasAddedShoe ->
-            if(hasAddedShoe) {
-                updateShoeList(inflater, container)
-            }
-        })*/
 
         viewModel.shoeList.observe(viewLifecycleOwner, Observer { newShoeList ->
                    updateShoeList(inflater, container, newShoeList)
         })
 
-
-
-// look example here https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
         binding.addFab.setOnClickListener{
             findNavController().navigate(ListingFragmentDirections.actionListingFragmentToDetailFragment())
         }
@@ -68,17 +54,6 @@ class ListingFragment : Fragment() {
         return  NavigationUI.onNavDestinationSelected(item,requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 
-//    private fun updateShoeList(inflater: LayoutInflater, container: ViewGroup? ){
-//        val shoesLayout = binding.root.findViewById<LinearLayout>(R.id.shoesLinear)//maybe for resolving scrolling shoeDetailsLayout?
-//
-//        viewModel.shoeList.value?.forEach { shoe ->
-//            val shoeDetailsBinding = DataBindingUtil.inflate<ShoeDetailsBinding>(inflater, R.layout.shoe_details, container, false)
-//            shoeDetailsBinding.shoe = shoe
-//            shoesLayout.addView(shoeDetailsBinding.root)
-//        } // or need to add just the newly added shoe?
-//
-//        viewModel.gotTheAddedShoe()
-//    }
     private fun updateShoeList(inflater: LayoutInflater, container: ViewGroup?, shoesList: List<Shoe>) {
         val shoesLayout =
             binding.root.findViewById<LinearLayout>(R.id.shoesLinear)//maybe for resolving scrolling shoeDetailsLayout?
@@ -87,28 +62,6 @@ class ListingFragment : Fragment() {
                 DataBindingUtil.inflate<ShoeDetailsBinding>(inflater, R.layout.shoe_details, container, false)
             shoeDetailsBinding.shoe = shoe
             shoesLayout.addView(shoeDetailsBinding.root)
-        } // or need to add just the newly added shoe?
+        }
     }
-
-
 }
-
-//        viewModel.shoeList.observe(viewLifecycleOwner, Observer { newList ->
-//        val iterator = newList.listIterator()
-//        for (item in iterator) {
-//        // add view}
-//           // TODO
-//        })
-/*
-viewModel.eventShoeAdded.observe(viewLifecycleOwner, Observer { hasAddedShoe ->
-    if(hasAddedShoe) {
-//                updateShoeList()
-    }
-})*/
-
-
-
-
-
-
-

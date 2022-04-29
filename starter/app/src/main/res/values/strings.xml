@@ -7,8 +7,9 @@
     <string name="add_new_shoe_to_listing">add new shoe to listing</string>
     <string name="enter__shoe_details">Enter details for the new shoe</string>
     <string name="shoe_name">Shoe Name</string>
-    <string name="company_name">Shoe Company Name</string>
-    <string name="shoe_size">Shoe Size as x.x</string>
+    <string name="company_name">Shoe Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_size_x">Shoe Size as x.x</string>
     <string name="shoe_description">Shoe Description</string>
     <string name="enter_password">Enter Password</string>
     <string name="enter_email">Enter Email</string>
