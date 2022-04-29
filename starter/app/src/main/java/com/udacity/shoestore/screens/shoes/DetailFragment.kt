@@ -35,18 +35,29 @@ class DetailFragment : Fragment() {
 //
 
         binding.saveButton.setOnClickListener{
-//            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
+//            val shoe = Shoe("hopper",7.5, "addidas", "light weight shoe for ladies")
 
-            val shoe = Shoe("hopper",7.5, "addidas", "light weight shoe for ladies")
-            viewModel.addShoe(shoe)
-            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
+//            viewModel.addShoe(binding.shoe)
+            viewModel.addShoe(getShoeDetails())
+//            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
+            findNavController().navigateUp()
         }
 
         binding.cancelButton.setOnClickListener{
-            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
+//            findNavController().navigate(DetailFragmentDirections.actionDetailFragmentToListingFragment())
+            findNavController().navigateUp()
         }
 
         return binding.root
+    }
+
+    private fun getShoeDetails() : Shoe {
+        var shoe : Shoe = Shoe("",0.0,"", "")
+        shoe.name = binding.editShoeName.text.toString()
+        shoe.size = binding.editShoeSize.text.toString().toDouble()
+        shoe.company = binding.editShoeCompany.text.toString()
+        shoe.description = binding.editShoeDescription.text.toString()
+        return shoe
     }
 //    // to hide the keyboard , don't know much of explanation for it
 //    val imm = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
