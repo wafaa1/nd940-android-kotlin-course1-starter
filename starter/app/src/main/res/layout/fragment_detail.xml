@@ -60,6 +60,7 @@
             android:layout_marginBottom="@dimen/padding_small"
             android:ems="10"
             android:hint="@string/shoe_size"
+            android:inputType="numberDecimal"
             app:layout_constraintBottom_toTopOf="@+id/editShoeCompany"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.452"

@@ -14,6 +14,7 @@ import androidx.navigation.ui.NavigationUI
 import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListingBinding
 import com.udacity.shoestore.databinding.ShoeDetailsBinding
+import com.udacity.shoestore.models.Shoe
 import com.udacity.shoestore.screens.welcome.WelcomeFragmentDirections
 
 class ListingFragment : Fragment() {
@@ -37,11 +38,16 @@ class ListingFragment : Fragment() {
 //        viewModel = ViewModelProvider(this).get(ListingViewModel::class.java)
 
 
-        viewModel.eventShoeAdded.observe(viewLifecycleOwner, Observer { hasAddedShoe ->
+       /* viewModel.eventShoeAdded.observe(viewLifecycleOwner, Observer { hasAddedShoe ->
             if(hasAddedShoe) {
                 updateShoeList(inflater, container)
             }
+        })*/
+
+        viewModel.shoeList.observe(viewLifecycleOwner, Observer { newShoeList ->
+                   updateShoeList(inflater, container, newShoeList)
         })
+
 
 
 // look example here https://stackoverflow.com/questions/2395769/how-to-programmatically-add-views-to-views
@@ -62,17 +68,29 @@ class ListingFragment : Fragment() {
         return  NavigationUI.onNavDestinationSelected(item,requireView().findNavController()) || super.onOptionsItemSelected(item)
     }
 
-    private fun updateShoeList(inflater: LayoutInflater, container: ViewGroup? ){
-        val shoesLayout = binding.root.findViewById<LinearLayout>(R.id.shoesLinear)//maybe for resolving scrolling shoeDetailsLayout?
-
-        viewModel.shoeList.value?.forEach { shoe ->
-            val shoeDetailsBinding = DataBindingUtil.inflate<ShoeDetailsBinding>(inflater, R.layout.shoe_details, container, false)
+//    private fun updateShoeList(inflater: LayoutInflater, container: ViewGroup? ){
+//        val shoesLayout = binding.root.findViewById<LinearLayout>(R.id.shoesLinear)//maybe for resolving scrolling shoeDetailsLayout?
+//
+//        viewModel.shoeList.value?.forEach { shoe ->
+//            val shoeDetailsBinding = DataBindingUtil.inflate<ShoeDetailsBinding>(inflater, R.layout.shoe_details, container, false)
+//            shoeDetailsBinding.shoe = shoe
+//            shoesLayout.addView(shoeDetailsBinding.root)
+//        } // or need to add just the newly added shoe?
+//
+//        viewModel.gotTheAddedShoe()
+//    }
+    private fun updateShoeList(inflater: LayoutInflater, container: ViewGroup?, shoesList: List<Shoe>) {
+        val shoesLayout =
+            binding.root.findViewById<LinearLayout>(R.id.shoesLinear)//maybe for resolving scrolling shoeDetailsLayout?
+        shoesList.forEach { shoe ->
+            val shoeDetailsBinding =
+                DataBindingUtil.inflate<ShoeDetailsBinding>(inflater, R.layout.shoe_details, container, false)
             shoeDetailsBinding.shoe = shoe
             shoesLayout.addView(shoeDetailsBinding.root)
         } // or need to add just the newly added shoe?
-
-        viewModel.gotTheAddedShoe()
     }
+
+
 }
 
 //        viewModel.shoeList.observe(viewLifecycleOwner, Observer { newList ->
