@@ -5,6 +5,7 @@ import android.view.*
 import androidx.fragment.app.Fragment
 import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -17,8 +18,9 @@ import com.udacity.shoestore.screens.welcome.WelcomeFragmentDirections
 
 class ListingFragment : Fragment() {
 
-    private lateinit var viewModel: ListingViewModel
+//    private lateinit var viewModel: ListingViewModel
 
+    private val viewModel: ListingViewModel by activityViewModels()
     private lateinit var binding: FragmentListingBinding
 
     override fun onCreateView(
@@ -32,7 +34,7 @@ class ListingFragment : Fragment() {
             inflater, R.layout.fragment_listing, container, false)
 
         // Get the viewmodel
-        viewModel = ViewModelProvider(this).get(ListingViewModel::class.java)
+//        viewModel = ViewModelProvider(this).get(ListingViewModel::class.java)
 
 
         viewModel.eventShoeAdded.observe(viewLifecycleOwner, Observer { hasAddedShoe ->
