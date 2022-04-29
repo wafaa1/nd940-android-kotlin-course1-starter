@@ -22,4 +22,9 @@
     <string name="rule2">If need to add a new shoe to the store, click the \"+\" button in the next screen and enter the information for the new added shoe: shoe name, size (in form of x.x), company name, and description.</string>
     <string name="add">+</string>
     <string name="log_out">Log Out</string>
+    <string name="login_label">LOGIN</string>
+    <string name="welcome_label">WELCOME</string>
+    <string name="instruction_label">INSTRUCTION</string>
+    <string name="shoes_listing_label">SHOES LISTING</string>
+    <string name="shoe_details_label">SHOE DETAILS</string>
 </resources>

@@ -7,7 +7,6 @@ import android.widget.LinearLayout
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.ui.NavigationUI
@@ -15,7 +14,6 @@ import com.udacity.shoestore.R
 import com.udacity.shoestore.databinding.FragmentListingBinding
 import com.udacity.shoestore.databinding.ShoeDetailsBinding
 import com.udacity.shoestore.models.Shoe
-import com.udacity.shoestore.screens.welcome.WelcomeFragmentDirections
 
 class ListingFragment : Fragment() {
 
@@ -52,6 +50,12 @@ class ListingFragment : Fragment() {
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         return  NavigationUI.onNavDestinationSelected(item,requireView().findNavController()) || super.onOptionsItemSelected(item)
+//        when(item.itemId){
+//            R.id.login ->{
+//                findNavController().navigate(ListingFragmentDirections.actionListingFragmentToLogout())
+//            }
+//        }
+//        return  super.onOptionsItemSelected(item)
     }
 
     private fun updateShoeList(inflater: LayoutInflater, container: ViewGroup?, shoesList: List<Shoe>) {
