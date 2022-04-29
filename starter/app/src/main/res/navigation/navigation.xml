@@ -49,6 +49,7 @@
         android:label="DetailFragment" >
         <action
             android:id="@+id/action_detailFragment_to_listingFragment"
-            app:destination="@id/listingFragment" />
+            app:destination="@id/listingFragment"
+            app:popUpToInclusive="false" />
     </fragment>
 </navigation>
