@@ -14,8 +14,8 @@ class ListingViewModel : ViewModel() {
         get() = _shoeList
 
     private  val  initialShoeList = mutableListOf<Shoe>(
-            Shoe("runner",10.0,"nike","men sports shoes for running"),
-            Shoe("tennis", 8.5 , "puma", "ladies sports tennis shoes"),
+//            Shoe("runner",10.0,"nike","men sports shoes for running"),
+//            Shoe("tennis", 8.5 , "puma", "ladies sports tennis shoes"),
             Shoe("classic", 11.5, "clarks", "men classic black shoes")
     )
 

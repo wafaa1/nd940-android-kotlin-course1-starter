@@ -81,6 +81,7 @@
             android:ems="10"
             android:hint="@string/shoe_size_x"
             android:inputType="numberDecimal"
+            android:text="@={`` + shoe.size}"
             app:layout_constraintBaseline_toBaselineOf="@+id/shoe_size_text"
             app:layout_constraintStart_toStartOf="@+id/edit_shoe_description" />
         <!--            android:text="@={`` + shoe.size}"-->
@@ -137,6 +138,7 @@
             android:layout_marginTop="72dp"
             android:text="SAVE"
             android:textSize="20sp"
+            android:onClick="@{()-> listingViewModel.addShoe(shoe)}"
             app:layout_constraintEnd_toStartOf="@+id/cancelButton"
             app:layout_constraintHorizontal_bias="0.333"
             app:layout_constraintStart_toStartOf="parent"

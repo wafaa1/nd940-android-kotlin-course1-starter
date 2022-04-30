@@ -29,10 +29,13 @@ class DetailFragment : Fragment() {
         binding = DataBindingUtil.inflate(
             inflater, R.layout.fragment_detail, container, false)
 
-        binding.saveButton.setOnClickListener{
-            viewModel.addShoe(getShoeDetails())
-            findNavController().navigateUp()
-        }
+        binding.listingViewModel = viewModel // added after adding new data variable in the view - fragment_detail
+
+        // commenting below now to do through data binding and automated direct communication between view and data not through UI Controller
+//        binding.saveButton.setOnClickListener{
+//            viewModel.addShoe(getShoeDetails())
+//            findNavController().navigateUp()
+//        }
 
         binding.cancelButton.setOnClickListener{
             findNavController().navigateUp()
