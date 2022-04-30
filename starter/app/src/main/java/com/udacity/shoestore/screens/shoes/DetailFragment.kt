@@ -31,6 +31,7 @@ class DetailFragment : Fragment() {
 
         binding.listingViewModel = viewModel // added after adding new data variable in the view - fragment_detail
 
+        binding.shoe = Shoe("", 0.0, "", "", emptyList())//https://knowledge.udacity.com/questions/839435
         // commenting below now to do through data binding and automated direct communication between view and data not through UI Controller
 //        binding.saveButton.setOnClickListener{
 //            viewModel.addShoe(getShoeDetails())
