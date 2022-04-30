@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+<!--    using linear layout here as the layout is simple with 2 TextViews and a button that are layed vertically-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/small_margin_padding"
+        android:layout_marginEnd="@dimen/small_margin_padding"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".WelcomeFragment">
+
+        <TextView
+            android:id="@+id/welcomeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/xLarge_margin_padding"
+            android:layout_marginTop="@dimen/xLarge_margin_padding"
+            android:layout_marginEnd="@dimen/xLarge_margin_padding"
+            android:layout_marginBottom="@dimen/xLarge_margin_padding"
+            android:fontFamily="casual"
+            android:text="@string/welcome"
+            android:textAlignment="center"
+            android:textSize="40sp" />
+
+        <TextView
+            android:id="@+id/storeText"
+            style="@style/stylingText"
+            android:layout_width="match_parent"
+            android:layout_height="182dp"
+            android:layout_marginStart="@dimen/small_margin_padding"
+            android:layout_marginTop="@dimen/large_margin_padding"
+            android:layout_marginEnd="@dimen/small_margin_padding"
+            android:layout_marginBottom="@dimen/small_margin_padding"
+            android:text="@string/welcome_long_text"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/welcomeNextButton"
+            style="@style/stylingButton"
+            android:layout_marginTop="@dimen/xLarge_margin_padding"
+            android:text="@string/next" />
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.android.navigation.LoginFragment">
+
+<!--    used constraint layout here for the complex layout as using different views: TextView, EditView, and buttons in 2 columns-->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/emailText"
+            android:layout_width="81dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="120dp"
+            android:paddingTop="@dimen/small_margin_padding"
+            android:paddingBottom="@dimen/small_margin_padding"
+            android:text="@string/enter_email"
+            android:textAlignment="center"
+            app:layout_constraintEnd_toStartOf="@+id/editEmail"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/editEmail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="40dp"
+            android:ems="10"
+            android:hint="@string/enter_email"
+            android:inputType="textEmailAddress"
+            android:minHeight="48dp"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/emailText"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <TextView
+            android:id="@+id/passwordText"
+            android:layout_width="114dp"
+            android:layout_height="57dp"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="52dp"
+            android:gravity="center"
+            android:text="@string/enter_password"
+            android:textAlignment="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailText" />
+
+        <EditText
+            android:id="@+id/editPassword"
+            style="@style/stylingText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:ems="10"
+            android:hint="@string/enter_password"
+            android:inputType="textPassword"
+            android:textAlignment="center"
+            app:layout_constraintBaseline_toBaselineOf="@+id/passwordText"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/signInButton"
+            style="@style/stylingButton"
+            android:layout_marginStart="84dp"
+            android:layout_marginTop="120dp"
+            android:text="@string/sign_in"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/passwordText" />
+
+        <Button
+            android:id="@+id/signUpButton"
+            style="@style/stylingButton"
+            android:layout_marginStart="16dp"
+            android:paddingBottom="@dimen/small_margin_padding"
+            android:text="@string/sign_up"
+            app:layout_constraintBaseline_toBaselineOf="@+id/signInButton"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.692"
+            app:layout_constraintStart_toEndOf="@+id/signInButton" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
+
+
+    <!--        style="@style/style_text_1"-->
+
+
+    <!--<LinearLayout-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:orientation="vertical"-->
+    <!--    android:textAlignment="center">-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/text_name"-->
+    <!--        style="@style/style_text_1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@={myName.name}"-->
+    <!--        android:textAlignment="center" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/editTextPersonName"-->
+    <!--        style="@style/style_text_1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:ems="10"-->
+    <!--        android:hint="@string/put_your_name"-->
+    <!--        android:text="@={myName.nickname}"-->
+    <!--        android:inputType="textPersonName" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/done_button"-->
+    <!--        style="@style/Widget.AppCompat.Button.Colored"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/top_margin"-->
+    <!--        android:fontFamily="@font/roboto"-->
+    <!--        android:layout_gravity="center_horizontal"-->
+    <!--        android:text="@string/done" />-->
+
+    <!--    <TextView-->
+    <!--        android:id="@+id/display_nickname_text"-->
+    <!--        style="@style/style_text_1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:textAlignment="center"-->
+    <!--        android:text="@={myName.nickname}"-->
+    <!--        android:visibility="gone" />-->
+
+    <!--    <ImageView-->
+    <!--        android:id="@+id/star_image"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginTop="@dimen/top_margin"-->
+    <!--        android:contentDescription="@string/yellow_star"-->
+    <!--        android:paddingTop="@dimen/top_padding"-->
+    <!--        app:srcCompat="@android:drawable/btn_star_big_on"-->
+    <!--        tools:ignore="ImageContrastCheck" />-->
+
+    <!--    <ScrollView-->
+    <!--        android:id="@+id/bio_scroll"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent">-->
+
+    <!--        <LinearLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:orientation="vertical">-->
+
+    <!--            <ImageView-->
+    <!--                android:id="@+id/image_scroll"-->
+    <!--                style="@style/Theme.AboutMe"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                app:srcCompat="@android:drawable/checkbox_on_background" />-->
+
+    <!--            <TextView-->
+    <!--                android:id="@+id/textView4"-->
+    <!--                style="@style/style_text_1"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:lineSpacingMultiplier="1.2"-->
+    <!--                android:paddingStart="@dimen/top_padding"-->
+    <!--                android:paddingTop="@dimen/top_margin"-->
+    <!--                android:paddingEnd="@dimen/top_padding"-->
+    <!--                android:text="@string/bio" />-->
+    <!--        </LinearLayout>-->
+    <!--    </ScrollView>-->
+
+    <!--    <Switch-->
+    <!--        android:id="@+id/switch1"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="Switch" />-->
+
+    <!--</LinearLayout>-->
+    <!--</layout>-->

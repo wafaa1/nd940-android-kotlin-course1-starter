@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/small_margin_padding"
+        android:layout_marginEnd="@dimen/small_margin_padding"
+        android:orientation="vertical"
+        android:gravity="center"
+        tools:context=".InstructionFragment">
+
+        <!-- TODO: Update blank fragment layout -->
+        <TextView
+            android:id="@+id/rule1Text"
+            style="@style/stylingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/small_margin_padding"
+            android:layout_marginBottom="@dimen/large_margin_padding"
+            android:text="@string/rule1"
+            android:textAlignment="center" />
+        <TextView
+            android:id="@+id/rules2Text"
+            style="@style/stylingText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/large_margin_padding"
+            android:layout_marginBottom="@dimen/large_margin_padding"
+            android:text="@string/rule2"
+            android:textAlignment="center" />
+        <Button
+            android:id="@+id/instructionNextButton"
+            style="@style/stylingButton"
+            android:text="@string/next" />
+
+    </LinearLayout>
+</layout>

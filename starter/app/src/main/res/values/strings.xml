@@ -1,3 +1,30 @@
 <resources>
     <string name="app_name">ShoeStore</string>
+    <string name="email">Enter your email</string>
+    <string name="login">Log In</string>
+    <string name="newAccount">Create An Account</string>
+    <string name="welcome">Welcome</string>
+    <string name="add_new_shoe_to_listing">add new shoe to listing</string>
+    <string name="enter__shoe_details">Enter details for the new shoe</string>
+    <string name="shoe_name">Shoe Name</string>
+    <string name="company_name">Shoe Company</string>
+    <string name="shoe_size">Shoe Size</string>
+    <string name="shoe_size_x">Shoe Size as x.x</string>
+    <string name="shoe_description">Shoe Description</string>
+    <string name="enter_password">Enter Password</string>
+    <string name="enter_email">Enter Email</string>
+    <string name="enter_your_password">Enter your password</string>
+    <string name="sign_in">SIGN IN</string>
+    <string name="sign_up">SIGN UP</string>
+    <string name="next">NEXT</string>
+    <string name="welcome_long_text">Welcome to the Shoe Store App. Here you can view the listed shoes in store and add new shoe to the existing listing.</string>
+    <string name="rule1">By clicking the NEXT button below, you will be directed to listing of all the shoes in store.</string>
+    <string name="rule2">If need to add a new shoe to the store, click the \"+\" button in the next screen and enter the information for the new added shoe: shoe name, size (in form of x.x), company name, and description.</string>
+    <string name="add">+</string>
+    <string name="log_out">Log Out</string>
+    <string name="login_label">LOGIN</string>
+    <string name="welcome_label">WELCOME</string>
+    <string name="instruction_label">INSTRUCTION</string>
+    <string name="shoes_listing_label">SHOES LISTING</string>
+    <string name="shoe_details_label">SHOE DETAILS</string>
 </resources>
